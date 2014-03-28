@@ -20,4 +20,7 @@ public class TangramQuadSprite extends TangramSprite {
 		name = "QUAD";
 	}
 	
+	public float getRotation() {
+		return super.getRotation()%90;
+	}
 }

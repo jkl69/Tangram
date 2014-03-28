@@ -70,13 +70,13 @@ public class TangramInputAdapter extends InputAdapter {
 
 		if (tangram.TurnL.contains(screenX, mY)) {
 			if (tangramsprite != null) 
-				tangramsprite.setRotation(tangramsprite.getRotation()+45);
+				tangramsprite.setRotation(tangramsprite.getRotation()-45);
 			System.out.println("Rotation:"+tangramsprite.getRotation());
 			return super.touchDown(screenX, screenY, pointer, button);
     	}
 		if (tangram.TurnR.contains(screenX, mY)) {
 			if (tangramsprite != null)
-				tangramsprite.setRotation(tangramsprite.getRotation()-45);
+				tangramsprite.setRotation(tangramsprite.getRotation()+45);
 			System.out.println("Rotation:"+tangramsprite.getRotation());
 			return super.touchDown(screenX, screenY, pointer, button);
     	}

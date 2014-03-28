@@ -36,4 +36,7 @@ public class TangramParallSprite2 extends TangramSprite {
 		name = "PARALLEL";
 	}
 	
+	public float getRotation() {
+		return super.getRotation()%180;
+	}
 }

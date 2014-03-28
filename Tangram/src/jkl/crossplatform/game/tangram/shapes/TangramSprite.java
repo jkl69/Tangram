@@ -48,7 +48,8 @@ public class TangramSprite {
 
 	public void RenderX(ShapeRenderer shapeRenderer) {
 	    shapeRenderer.begin(ShapeType.Line);
-	    shapeRenderer.setColor(1, 1, 1, 1);
+	    shapeRenderer.setColor(0, 1, 0, 1);
+//	    shapeRenderer.setColor(1, 1, 1, 1);
 	    if (selected) shapeRenderer.polygon(polygon.getTransformedVertices());
 //	    shapeRenderer.x(sprite.getOriginX(),sprite.getOriginY(),10);
 //	    shapeRenderer.x(getX(),getY(),BaseLength/10);
@@ -82,7 +83,10 @@ public class TangramSprite {
 		}
 
 	public float getRotation() {
-		return polygon.getRotation();
+		float rot = polygon.getRotation()%360;
+		if (rot<0) {rot=360+rot;}
+		return rot;
+//		return polygon.getRotation()%360;
 	}
     
 }
